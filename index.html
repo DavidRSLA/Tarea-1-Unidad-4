@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto Web</title>
+</head>
+<body>
+    <header>
+        <h1>Tarea I. Conceptos y ejemplos básicos en HTML.</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#acercademi">Acerca de mí</a></li>
+            <li><a href="#materia">Acerca de la materia</a></li>
+            <li>
+                <a href="#conceptosbasicos">Conceptos básicos</a>
+                <ul>
+                    <li><a href="#seguridadformularios">Mecanismos de seguridad en formularios</a></li>
+                    <li><a href="#ajax">Introducción a AJAX</a></li>
+                    <li><a href="#jquery">JQuery</a></li>
+                    <li><a href="#mootools">Mootools</a></li>
+                    <li><a href="#prototype">Prototype</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#ejemplosbasicos">Ejemplos básicos</a>
+                <ul>
+                    <li><a href="#ejemploseguridad">Mecanismos de seguridad en formularios</a></li>
+                    <li><a href="#ejemploajax">Introducción a AJAX</a></li>
+                    <li><a href="#ejemplojquery">JQuery</a></li>
+                    <li><a href="#ejemplomootools">Mootools</a></li>
+                    <li><a href="#ejemploprototype">Prototype</a></li>
+                </ul>
+            </li>
+            <li><a href="#fuentes">Fuentes de Información</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="acercademi">
+           
+            <h2>Acerca de mí</h2>
+            <p><strong>Nombre:</strong> David Ramos Luna</p>
+            <p><strong>No. de control:</strong> 21490571</p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:a21490571@itmexicali.edu.mx">a21490571@itmexicali.edu.mx</a></p>
+            <p><strong>CV:</strong><a href="PracticaExamen.html">Ir a CV</a></p>
+        <div id="materia">
+            <h2><br>Acerca de la materia</h2>
+            <p><strong>Nombre del Profesor:</strong> Edder Iván Pimentel Félix</p>
+            <p><strong>Nombre de la Materia:</strong> Programación Web</p>
+            <p><strong>Unidad IV:</strong> Programación Del Lado Del Servidor</p>
+            <p><strong>Nombre de la Tarea:</strong> Tarea I. Conceptos y ejemplos básicos en HTML.</p> 
+            <br><a href="index.html">Regresar a la página principal</a>
+        </div>
+        <div id="conceptosbasicos">
+            <h2><br>Conceptos básicos</h2>   
+            <article id="seguridadformularios">
+                <h3>Mecanismos de seguridad en formularios</h3>
+                <p><strong>¿Qué es?</strong><br>AJAX (Asynchronous JavaScript and XML) es una técnica de desarrollo web que permite a las 
+                    aplicaciones actualizar partes específicas de una página web sin recargarla completamente. 
+                    Esto se logra mediante solicitudes asíncronas al servidor, donde se envían y reciben datos en segundo plano, 
+                    frecuentemente en formato JSON o XML.</p>
+
+                <p><strong>¿Para que sirve?</strong><br>Permite cargar o refrescar contenido en una página (como publicaciones o comentarios) sin necesidad de recargar toda la página.
+                   <br>Hacer que aplicaciones como chats, notificaciones y paneles se actualicen automáticamente con nuevos datos.
+                   <br>Enviar datos al servidor (como formularios de registro o contacto) sin recargar la página.</p>
+
+                <strong>¿Cuando se usa?</strong>
+                <ul>
+                    <li>Cargar contenido dinámico</li>
+                    <li>Actualizaciones en tiempo real</li>
+                    <li>Aplicaciones de una sola página (SPA)</li>
+                    <li>Prevención de recargas innecesarias</li>
+                </ul>
+                
+                <h3><br>Captchas</h3>
+                <p>Una de las mayores problemáticas de los formularios es que los robots se dediquen a enviar información, 
+                    buscando o explotando vulnerabilidades detectadas. 
+                    Es por ello fundamental que nos aseguremos de que son realmente humanos los que están interactuando con nuestros formularios. 
+                    Para ello se puede incorporar un sistema de captcha adecuado. </p>
+                <p>Existen diversas alternativas en el mercado, pero igual que aparecen desaparecen. 
+                    Una que perdura y en la que podemos confiar es reCaptcha, un servicio ofrecido por Google. 
+                    Básicamente es un sistema muy amistoso para el usuario que muchas veces se valida simplemente pulsando un checkbox. </p>
+                <p>El sistema de seguridad para formularios reCaptcha es gratuito en la mayoría de los casos. 
+                    Requiere registro para la obtención de un par de claves, la de sitio web y la clave secreta. 
+                    Esto lo podemos hacer fácilmente desde la sección «Admin Console» de la página de reCaptcha. 
+                    Una vez registrados en el servicio y habiendo dado de alta el sitio web, 
+                    tenemos que realizar la programación que nos permita integrarlo el sistema, 
+                    pero en ocasiones suele ser tan sencillo como configurar el correspondiente plugin en nuestro CMS.</p>
+                <h3><br>Evitar ataques CSRF</h3>
+                <p>Otro de los males de los formularios son los ataques CSRF (del inglés Cross-site request forgery) 
+                    o falsificación de petición en sitios cruzados, que se producen al realizarse solicitudes POST desde 
+                    otros dominios que los ciberdelincuentes aprovechan para apoderarse de sesiones abiertas sobre los sitios atacados. 
+                    CSRF se basa generalmente en un token, que simplemente se valida antes de aceptar el procesamiento de la información 
+                    que viene mediante solicitudes POST. La mayoría de los frameworks (entre ellos Laravel o Symfony) incluyen por defecto 
+                    protección anti CSRF, una razón más para usarlos.</p>
+                    <a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="ajax">
+                <h3><br>Introducción a AJAX</h3>
+                <p><strong>¿Qué es?</strong><br>JavaScript asíncrono y XML (AJAX) es una combinación de tecnologías de desarrollo de aplicaciones web que hacen que las 
+                    aplicaciones web respondan mejor a la interacción del usuario. Cada vez que los usuarios interactúan con una aplicación web, 
+                    por ejemplo, al hacer clic en botones o en casillas de verificación, el navegador intercambia datos con el servidor remoto. 
+                    El intercambio de datos puede provocar que las páginas se vuelvan a cargar e interrumpir la experiencia del usuario. 
+                    Con AJAX, las aplicaciones web pueden enviar y recibir datos en segundo plano para que solo se actualicen pequeñas partes 
+                    de la página según sea necesario.</p>
+                <p><strong>¿Para que sirve?</strong><br>Ajax permite que un usuario de una aplicación web interactúe con una página web 
+                    sin la interrupción de la recarga constante de la página web.</p>
+                <strong>¿Cuando se usa?</strong><br>    
+                <ul>
+                    <li>Validación de formularios</li>
+                    <li>Actualizaciones en tiempo real</li>
+                    <li>Autocompletado</li>
+                    <li>Enviar datos al servidor</li>
+                    <li>Cargar datos dinámicamente</li>
+                </ul>
+                <a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="jquery">
+                <h3><br>JQuery</h3>
+                <p><strong>¿Qué es?</strong><br>jQuery es una biblioteca de JavaScript minificada de código abierto creada para simplificar las operaciones de JavaScript. 
+                    Puedes utilizar jQuery para codificar rápidamente una serie de comandos diferentes que te llevarían mucho más tiempo si utilizaras código HTML.</p>
+                <p><strong>¿Para que sirve?</strong><br>jQuery se usa para crear animaciones y efectos visuales en páginas y aplicaciones web. Resulta muy útil en Front End, 
+                    para desarrollar la parte visible, y en Full Stack, para crear sitios web desde cero. 
+                    También es popular entre los desarrolladores con poca experiencia en programación.</p>
+                <strong>¿Cuando se usa?</strong><br>
+                    <ul>
+                        <li>Proyectos heredados</li>
+                        <li>Compatibilidad con navegadores antiguos</li>
+                        <li>Complementos (plugins)</li>
+                        <li>Tareas pequeñas y específicas</li>
+                    </ul>
+                    <a href="index.html">Regresar a la página principal</a>
+                </article>
+            <article id="mootools">
+                <h3><br>Mootools</h3>
+                <p><strong>¿Qué es?</strong><br>MooTools es un framework de JavaScript compacto, modular y orientado a objetos diseñado para 
+                    desarrolladores de JavaScript de nivel intermedio a avanzado . Le permite escribir código potente, flexible y compatible 
+                    con todos los navegadores gracias a su API elegante, bien documentada y coherente. 
+                    MooTools tiene como objetivo mejorar JavaScript.</p>
+                <p><strong>¿Para que sirve?</strong><br>MooTools tiene una funcionalidad similar a jQuery, pero se enfoca más en ofrecer una estructura orientada a objetos.</p>
+                <strong>¿Cuando se usa?</strong><br>
+                <ul>
+                    <li>Aplicaciones modulares</li>
+                    <li>Compatibilidad con navegadores antiguos</li>
+                    <li>Estructura orientada a objetos</li>
+                </ul>
+                <a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="prototype">
+                <h3><br>Prototype</h3>
+                <p><strong>¿Qué es?</strong><br>Prototype es una biblioteca de JavaScript lanzada en 2005, diseñada para facilitar el desarrollo web 
+                    al proporcionar funciones para manipulación del DOM, manejo de eventos, solicitudes AJAX y programación orientada a objetos. 
+                    Fue una de las primeras bibliotecas en popularizar el uso extensivo de JavaScript en aplicaciones web y ayudó a resolver problemas 
+                    de compatibilidad entre navegadores de la época.</p>
+                <p><strong>¿Para que sirve?</strong><br></p>
+                <ul>
+                    <li>Manipulación del DOM</li>
+                    <li>Manejo de eventos</li>
+                    <li>Solicitudes AJAX</li>
+                    <li>Extensiones útiles para objetos nativos</li>
+                    <li>Programación orientada a objetos</li>
+                </ul>
+                <strong>¿Cuando se usa?</strong><br>
+                <ul>
+                    <li>Sistemas que usan Ruby on Rails antiguos</li>
+                </ul>
+                <a href="index.html">Regresar a la página principal</a>
+            </article>
+        </div>
+        <div id="ejemplosbasicos">
+            <h2><br>Ejemplos básicos</h2>
+            <article id="ejemploseguridad">
+                <h3>Mecanismos de seguridad en formularios</h3>
+                <p><strong>Ejemplo de captcha de texto</strong><br>Aquí indica que, para poder procesar la solicitud, el usuario deberá llenar el espacio con las letras que se leen en azul. 
+                 Cuando se han tecleado correctamente, el usuario puede continuar con su proceso, que en este caso es crear una cuenta.</p>
+                 <img src="CaptchaTexto.png">
+                <p><strong>Ejemplo de captcha visual</strong><br>Seguramente ya has visto este tipo de captcha, en el que tienes que seleccionar 
+                imágenes de una misma categoría. En este caso pide que «selecciones todas las imágenes donde veas botes». 
+                Cuando has elegido todas puedes hacer clic en el botón para verificar que en verdad eres humano.</p>
+                <img src="CaptchaVisual.png">
+                <p><strong>Ejemplo de captcha de juego de palabras</strong><br>Existen muchas formas para hacer juegos de palabras en captchas; en este caso hay dos palabras tachadas y borrosas. 
+                Solamente un humano podría detectarlas y escribirlas.</p>
+                <img src="CaptchaPalabras.png">
+                <p><strong>Ejemplo de captcha con campos ocultos</strong><br>Cuando se trata de campos ocultos el sistema identifica de antemano un comportamiento humano y permite cierta acción, 
+                por ejemplo, descargar un archivo. Sin embargo, si el sistema detecta un comportamiento robótico (por ejemplo, una descarga de un volumen de archivo), entonces podría arrojar un 
+                captcha como el que vemos en la imagen.</p>
+                <img src="CaptchaCampos.png">
+                <br><strong>Ataques CSRF</strong><br>
+                <img src="ATAQUE-CSRF-1.png" width="25%" />
+                <br><a href="index.html">Regresar a la página principal</a>
+                </article>
+                <article id="ejemploajax">
+                <h3><br>Introducción a AJAX</h3>
+                <p><strong>Formularios Interactivos</strong><br>Imagina que estás completando un formulario en línea y cometes un error. Con AJAX, 
+                el sitio web puede verificar y validar tus datos en tiempo real sin tener que recargar la página completa. 
+                Esto te permite corregir los errores de forma instantánea y continuar con el proceso de envío sin interrupciones.</p>
+                <img src="AJAX1.png" >
+                <p><strong>Búsqueda en vivo</strong><br>Cuando realizas una búsqueda en un sitio web, AJAX puede mostrar los resultados a medida que escribes, 
+                sin tener que cargar una nueva página. Esto brinda una experiencia de búsqueda más fluida y eficiente, ya que puedes ver los resultados 
+                en tiempo real y ajustar tus términos de búsqueda de manera instantánea.</p>
+                <img src="AJAX2.png" >
+                <p><strong>Carga dinámica de contenido</strong><br>En sitios web con secciones que se actualizan con frecuencia, como las redes sociales, 
+                AJAX permite cargar nuevas publicaciones y comentarios sin tener que recargar toda la página. 
+                Esto crea una experiencia de navegación fluida, evitando interrupciones y ahorrando tiempo al usuario.</p>
+                <img src="AJAX3.png" >
+                <br><a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="ejemplojquery">
+                <h3><br>JQuery</h3>
+                <p>En este ejemplo, cuando se hace clic en el botón con el id “cambiarColor”, 
+                el fondo del cuerpo de la página se cambia a color celeste.</p>
+                <img src="JQUERY1.png" ><br>
+                <img src="JQUERY2.png" ><br>
+                <img src="JQUERY3.png" >
+                <br><a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="ejemplomootools">
+                <h3><br>Mootools</h3>
+                <p><strong>Efectos y animaciones</strong><br>Crear transiciones visuales.</p>
+                <img src="Mootools1.png" >
+                <p><strong>Efectos de ocultar/mostrar</strong><br>Cambiar la visibilidad de elementos.</p>
+                <img src="Mootools2.png" >
+                <br><a href="index.html">Regresar a la página principal</a>
+            </article>
+            <article id="ejemploprototype">
+                <h3><br>Prototype</h3>
+                <p><strong>Efectos visuales</strong><br>Prototype incluye la biblioteca Script.aculo.us para animaciones.</p>
+                <img src="Prototype1.png" >
+                <p><strong>Serialización de formularios</strong><br>Convertir los datos de un formulario en una cadena para enviar al servidor.</p>
+                <img src="Prototype2.png" >
+                <br><a href="index.html">Regresar a la página principal</a>
+            </article>
+        </div>
+        <div id="fuentes">
+            <h2><br>Fuentes de Información</h2>
+            <p>Sistemas de seguridad para formularios web. (s/f). Arsys. 
+                Recuperado el 21 de noviembre de 2024, de https://www.arsys.es/blog/seguridad-formularios</p>
+            <p>(S/f). Amazon.com. Recuperado el 21 de noviembre de 2024, 
+                de https://aws.amazon.com/es/what-is/ajax/#:~:text=AJAX%20permite%20a%20las%20aplicaciones,pase%20a%20la%20siguiente%20secci%C3%B3n.</p>
+            <p>Rational software architect 9.6.1. (2021, marzo 4). 
+                Ibm.com. https://www.ibm.com/docs/en/rational-soft-arch/9.6.1?topic=page-asynchronous-javascript-xml-ajax-overview</p>
+            <p>Gustavo, B. (2019, abril 19). ¿Qué es jQuery? Introducción para principiantes. 
+                Tutoriales Hostinger. https://www.hostinger.mx/tutoriales/que-es-jquery</p>
+            <p>Saavedra, J. A. (2023, julio 17). ¿Qué es jQuery y cómo usarlo? Ebac. https://ebac.mx/blog/que-es-jquery</p>
+            <p>MooTools Core. (s/f). Mootools.net. Recuperado el 22 de noviembre de 2024, de https://mootools.net/core</p>
+            <p>Coppola, M. (2022, agosto 1). Qué es el captcha, para qué sirve, qué tipos hay y ejemplos. Hubspot.es. https://blog.hubspot.es/website/que-es-captcha</p>
+            <p>Axarnet. (s/f). Qué es AJAX y para qué sirve【Ejemplos prácticos】. Axarnet.es. Recuperado el 23 de noviembre de 2024, de https://axarnet.es/blog/ajax</p>
+            <p>Casero, A. (2023, agosto 25). Tips y ejemplos para aprender jQuery desde cero. KeepCoding Bootcamps. https://keepcoding.io/blog/aprender-jquery/</p>
+            <br><a href="index.html">Regresar a la página principal</a>
+        </div>
+    </main>
+    <footer>
+        <p>Proyecto desarrollado por David Ramos Luna</p>
+    </footer>
+</body>
+</html>
